@@ -1,5 +1,6 @@
 package roulette;
 
+import roulette.bets.BetFactory;
 import roulette.bets.OddEven;
 import roulette.bets.RedBlack;
 import roulette.bets.ThreeConsecutive;
@@ -14,6 +15,7 @@ import util.ConsoleReader;
 public class Game {
     // name of the game
     private static final String DEFAULT_NAME = "Roulette";
+    private BetFactory bf = new BetFactory();
     // add new bet subclasses here
     private Bet[] myPossibleBets = {
         new RedBlack("Red or Black", 1),
